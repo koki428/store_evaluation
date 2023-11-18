@@ -11,11 +11,14 @@
         <div class='stores'>
             @foreach ($stores as $store) 
             <div class='store'>
-                <h2 class='store_name'>{{ $store->name }}</h2>
-                <h3 class='address'>住所：{{ $store->address }}</h3>
-                <h3 class='tell'>電話番号：{{ $store->tell }}</h3>
-                <h3 class='station'>最寄駅：{{ $store->station }}</32>
-                <h3 class='budget'>予算：{{ $store->budget }}</h3>
+                <h2 class='store_name'>
+                    <a href="/stores/{{ $store->id }}">{{ $store->name }}</a>
+                </h2>
+                <p>ジャンル：{{ $store->genre }}</p>
+                <p>住所：{{ $store->address }}</p>
+                <p>電話番号：{{ $store->tell }}</p>
+                <p>最寄駅：{{ $store->station }}</p>
+                <p>予算：{{ $store->budget }}</p>
             </div>
             @endforeach
         </div>

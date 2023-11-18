@@ -18,3 +18,5 @@ Route::get('/', function ()
 });
 
 Route::get('/', [StoreController::class, 'index']);
+
+Route::get('/stores/{store}', [StoreController::class ,'show']);
