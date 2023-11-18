@@ -10,6 +10,10 @@ class StoreController extends Controller
     public function index(Store $store)
     {
         return view('stores.index')->with(['stores' => $store->getByLimit(5)]);
-        return view('stores.index')->with(['evaluations' => $evaluation->get()]);
+    }
+    
+    public function show(Store $store)
+    {
+        return view('stores.show')->with(['store' => $store]);
     }
 }
