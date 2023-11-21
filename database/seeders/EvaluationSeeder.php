@@ -25,5 +25,15 @@ class EvaluationSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
+        
+        DB::table('evaluations')->insert([
+            'name' => '炭火焼 鰻のうな輝 名古屋本店',
+            'hotpeppar' => 'なし',
+            'tabelog' => '3.07',
+            'google' => '4.1',
+            'average' => '3.59',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+        ]);
     }
 }

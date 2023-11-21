@@ -18,12 +18,15 @@ return new class extends Migration
             $table->string('name',50);
             $table->string('address',200);
             $table->string('tell',50);
-            $table->string('time',50);
-            $table->foreignId('evaluation_id')->constrained();
+            $table->string('time',300);
+            $table->string('hotpeppar',10);
+            $table->string('tabelog',10);
+            $table->string('google',10);
+            $table->string('average',10);
             $table->string('genre',200);
             $table->string('pay',200);
             $table->string('close',50);
-            $table->string('station',200);
+            $table->string('station',300);
             $table->string('budget',200);
             $table->string('parking',100);
             $table->timestamps();
