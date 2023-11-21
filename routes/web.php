@@ -12,11 +12,14 @@ use App\Http\Controllers\StoreController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () 
-{
-    return view('stores/index'); 
-});
+//Route::get('/', function () 
+//{
+//    return view('stores/index'); 
+//});
 
 Route::get('/', [StoreController::class, 'index']);
-
+Route::post('/stores', [StoreController::class, 'preserve']);
+Route::get('/stores/create', [StoreController::class, 'create']);
 Route::get('/stores/{store}', [StoreController::class ,'show']);
+//Route::post('/stores', [StoreController::class, 'preserve']);
+

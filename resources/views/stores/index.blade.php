@@ -14,13 +14,16 @@
                 <h2 class='store_name'>
                     <a href="/stores/{{ $store->id }}">{{ $store->name }}</a>
                 </h2>
+                <p>評価：{{ $store->average }}</p>
                 <p>ジャンル：{{ $store->genre }}</p>
                 <p>住所：{{ $store->address }}</p>
-                <p>電話番号：{{ $store->tell }}</p>
-                <p>最寄駅：{{ $store->station }}</p>
                 <p>予算：{{ $store->budget }}</p>
             </div>
             @endforeach
+        </div>
+        <a href='/stores/create'>店舗登録</a>
+        <div class='paginate'>
+            {{ $stores->links('pagination::bootstrap-4') }}
         </div>
     </body>
 </html>
