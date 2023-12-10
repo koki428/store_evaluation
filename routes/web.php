@@ -18,8 +18,11 @@ use App\Http\Controllers\StoreController;
 //});
 
 Route::get('/', [StoreController::class, 'index']);
+//Route::post('/stores/search', [StoreController::class, 'search']);
+Route::get('/stores/no_result', [StoreController::class, 'no_result']);
+Route::get('/stores/search', [StoreController::class, 'search']);
 Route::post('/stores', [StoreController::class, 'preserve']);
 Route::get('/stores/create', [StoreController::class, 'create']);
-Route::get('/stores/{store}', [StoreController::class ,'show']);
+Route::get('/stores/{store}', [StoreController::class,'show']);
 //Route::post('/stores', [StoreController::class, 'preserve']);
 
