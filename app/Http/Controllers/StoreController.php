@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Store;
 use Illuminate\Http\Request;
+use Cloudinary;
 
 class StoreController extends Controller
 {
@@ -46,7 +47,11 @@ class StoreController extends Controller
     
     public function preserve(Request $request, Store $store)
     {
+        //dd($image_url);
+        
+        $image_url = Cloudinary::upload($request->file('image_url')->getRealPath())->getSecurePath();
         $input = $request['store'];
+        $input += ['image_url' => $image_url];
         $store->fill($input)->save();
         return redirect('/stores/' . $store->id);
         //dd($request->all());

@@ -18,6 +18,9 @@
                 <p>Google　{{ $store->google }}</p>
         </div>
         <div class="store_detail">
+            <div class="image">
+                <img src="{{ $store->image_url }}">
+            </div>
             <div class="time">
                 <h3>営業時間</h3>
                 <p>{!! nl2br(e($store->time)) !!}</p>
@@ -85,9 +88,6 @@
                 <h3>駐車場</h3>
                 <p>{!! nl2br(e($store->parking)) !!}</p>
             </div>
-        </div>
-        <div class="footer">
-            <a href="/">戻る</a>
         </div>
     </body>
 </html>

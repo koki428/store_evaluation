@@ -25,12 +25,13 @@ class StoreSeeder extends Seeder
             'tabelog' =>'3.14',
             'google' =>'4.3',
             'average' =>'3.72',
-            'genre' => '鳥料理・居酒屋・ラーメン',
+            'genre' => '鳥料理、居酒屋、ラーメン',
             'pay' => 'カード可（VISA、Master、JCB、AMEX）、電子マネー不可、ORコード決済不可',
             'close' =>'なし',
             'station' =>'栄駅から徒歩5分、伏見駅から徒歩8分、栄駅（名古屋）から548m',
-            'budget' =>'¥4000~¥4999',
+            'budget' =>'¥4000〜¥4999',
             'parking' =>'なし',
+            'image_url' =>'2395b695f8356def8dcb2d21d83e7273.jpg',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
@@ -48,15 +49,16 @@ class StoreSeeder extends Seeder
             'tabelog' =>'3.07',
             'google' =>'4.1',
             'average' =>'3.59',
-            'genre' => 'うなぎ・海鮮・郷土料理',
+            'genre' => 'うなぎ、海鮮、郷土料理',
             'pay' => 'カード可（VISA、Master、JCB、AMEX、Diners）
             電子マネー可（交通系電子マネー（Suicaなど）、 楽天Edy、nanaco、WAON、iD、QUICPay）
             QRコード決済可（PayPay、d払い、楽天ペイ、au PAY）',
             'close' =>'臨時休業あり',
             'station' =>'伏見駅1番出口から錦通り沿いに徒歩4分
             伏見駅から348m',
-            'budget' =>'¥3000~¥5999',
+            'budget' =>'¥3000〜¥5999',
             'parking' =>'なし',
+            'image_url' =>'2518492f6f65284ec1be7fbe020c73b2.jpg',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
