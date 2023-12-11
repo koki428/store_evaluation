@@ -28,7 +28,8 @@ return new class extends Migration
             $table->string('close',50);
             $table->string('station',300);
             $table->string('budget',200);
-            $table->string('parking',100);
+            $table->string('parking',200);
+            $table->string('image_url');
             $table->timestamps();
             $table->softDeletes();
             

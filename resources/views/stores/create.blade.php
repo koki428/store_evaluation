@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>店舗新規登録</h1>
-        <form action="/stores" method="POST">
+        <form action="/stores" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="store_name">
                 <h2>店名</h2>
@@ -62,7 +62,11 @@
             </div>
             <div class="parking">
                 <h2>駐車場</h2>
-                <input type="text" name="store[parking]" placeholder="駐車場情報を入力"/>
+                <textarea name="store[parking]" placeholder="駐車場情報を入力"></textarea>
+            </div>
+            <div class="image">
+                <h2>画像を登録</h2>
+                <input type="file" name="image_url">
             </div>
             <input type="submit" value="新規登録"/>
         </form>
