@@ -13,6 +13,6 @@
             <input type="text" name="keyword">
             <input type="submit" name="search" value="検索">
         </form>
-        <a href='/stores/create'>店舗登録</a>
+        <a href='/stores/create'>管理者ページ</a>
     </body>
 </html>
