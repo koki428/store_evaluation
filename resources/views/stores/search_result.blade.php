@@ -76,8 +76,8 @@
                                     <div class="col-Auto">
                                         <div class="rounded position-relative fruite-item">
                                             @foreach ($stores as $store)
-                                            <div class="p-3 border border-secondary border-top rounded-bottom">
-                                                <div class="text-white bg-secondary px-2 py-1 rounded position-absolute">{{ $store->genre }}</div>
+                                            <div class="p-3 border border-success border-top rounded-bottom">
+                                                <div class="text-white bg-success px-2 py-1 rounded position-absolute">{{ $store->genre }}</div>
                                                     <div class="fruite-img">
                                                         <img src="{{ $store->image_url1 }}" class="img-fluid w-50 py-5 rounded-position-absolute" alt="">
                                                     </div>
@@ -108,10 +108,11 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">検索</h4>
-                            <a class="btn-link" href="/">店名で検索</a>
-                            <a class="btn-link" href="/">ジャンルで検索</a>
-                            <a class="btn-link" href="/">住所で検索</a>
+                            <h4 class="text-light mb-3">サイト内リンク</h4>
+                            <a class="btn-link" href="/">トップページ</a>
+                            <a class="btn-link" href="/stores/name_index">店名で検索</a>
+                            <a class="btn-link" href="/stores/genre_index">ジャンルで検索</a>
+                            <a class="btn-link" href="/stores/address_index">住所で検索</a>
                             <a class="btn-link" href="">店舗一覧</a>
                         </div>
                     </div>
