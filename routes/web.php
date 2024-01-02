@@ -30,9 +30,13 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', [StoreController::class, 'index'])->name('index');
-//Route::post('/stores/search', [StoreController::class, 'search']);
+Route::get('/stores/name_index', [storeController::class, 'name_index']);
+Route::get('/stores/genre_index', [storeController::class, 'genre_index']);
+Route::get('/stores/address_index', [storeController::class, 'address_index']);
 Route::get('/stores/no_result', [StoreController::class, 'no_result']);
-Route::get('/stores/search', [StoreController::class, 'search']);
+Route::get('/stores/name_index/search_result', [StoreController::class, 'name_search']);
+Route::get('/stores/genre_index/search_result', [StoreController::class, 'genre_search']);
+Route::get('/stores/address_index/search_result', [StoreController::class, 'address_search']);
 Route::post('/stores', [StoreController::class, 'preserve']);
 Route::get('/stores/create', [StoreController::class, 'create'])->middleware("auth");
 Route::get('/stores/{store}', [StoreController::class,'show']);

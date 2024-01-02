@@ -40,24 +40,14 @@
         <div class="container-fluid py-5 mb-5 hero-header">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
-                    <div class="position-relative mx-auto">
-                        <p>このサイトはホットペッパーグルメ、食べログ、Googleの3つのサイトの店の評価を平均し掲載しているサイトです</p>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a class="d-flex m-2 py-2 bg-success rounded-pill active" href="/stores/name_index" style="text-decoration:none;">
-                                    <span class="text-white container" style="width: 130px;">店名で検索</span>
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a class="d-flex m-2 py-2 bg-success rounded-pill active" href="/stores/genre_index" style="text-decoration:none;">
-                                    <span class="text-white container" style="width: 165px;">ジャンルで検索</span>
-                                </a>
-                            </div>
-                            <div class="col-sm-4">
-                                <a class="d-flex m-2 py-2 bg-success rounded-pill active" href="/stores/address_index" style="text-decoration:none;">
-                                    <span class="text-white container" style="width: 130px;">住所で検索</span>
-                                </a>
-                            </div>
+                    <div class="col-Auto">
+                        <div class="position-relative mx-auto">
+                            <p>このページは住所で検索できます</p>
+                            <form action="/stores/address_index/search_result" method="GET">
+                                @csrf
+                                <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="text" name="address" placeholder="住所で検索">
+                                <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-70" style="top: 40%; right: 25%; background-color:green;" name="search">検索</button>
+                            </form>
                         </div>
                     </div>
                     <div class="col-Auto">

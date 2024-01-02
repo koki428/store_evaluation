@@ -16,23 +16,74 @@ class StoreController extends Controller
         //return view('stores.index')->with(['stores' => $store->getPaginateByLimit(5)]);
     }
     
-    public function search(Request $request, Store $store)
+    public function name_index()
     {
-        $keyword = $request->input('keyword');
+        $keyword = request('keyword');
+        $stores = Store::all();
+        return view('stores.name_index',['stores' => $stores, 'keyword' => $keyword]);
+        //return view('stores.index')->with(['stores' => $store->getPaginateByLimit(5)]);
+    }
+    
+    public function genre_index()
+    {
+        $keyword = request('keyword');
+        $stores = Store::all();
+        return view('stores.genre_index',['stores' => $stores, 'keyword' => $keyword]);
+        //return view('stores.index')->with(['stores' => $store->getPaginateByLimit(5)]);
+    }
+    
+    public function address_index()
+    {
+        $keyword = request('keyword');
+        $stores = Store::all();
+        return view('stores.address_index',['stores' => $stores, 'keyword' => $keyword]);
+        //return view('stores.index')->with(['stores' => $store->getPaginateByLimit(5)]);
+    }
+    
+    public function name_search(Request $request, Store $store)
+    {
+        $keyword = $request->input('name');
         $search = Store::where('name', 'like', '%'.$keyword.'%')->get();
+        
         
         if($search->isEmpty() || !isset($keyword)){
             //dd($search);
             return view('stores.no_result');
         }
         else{
-            //dd($search);
-            //return view('stores.search');
-            //$key = store::where('name', 'like', '%'.$keyword.'%')->getPaginateByLimit(5);
             $store=$search;
-            return view('stores.search', ['stores' => $store]);
+            return view('stores.search_result', ['stores' => $store]);
         }
-        //return view('stores.search')->with(['stores' => $store->getPaginateByLimit(5)]);
+    }
+    
+    public function genre_search(Request $request, Store $store)
+    {
+        $keyword = $request->input('genre');
+        $search = Store::where('genre', 'like', '%'.$keyword.'%')->get();
+        
+        if($search->isEmpty() || !isset($keyword)){
+            //dd($search);
+            return view('stores.no_result');
+        }
+        else{
+            $store=$search;
+            return view('stores.search_result', ['stores' => $store]);
+        }
+    }
+    
+    public function address_search(Request $request, Store $store)
+    {
+        $keyword = $request->input('address');
+        $search = Store::where('address', 'like', '%'.$keyword.'%')->get();
+        
+        if($search->isEmpty() || !isset($keyword)){
+            //dd($search);
+            return view('stores.no_result');
+        }
+        else{
+            $store=$search;
+            return view('stores.search_result', ['stores' => $store]);
+        }
     }
     
     public function show(Store $store)

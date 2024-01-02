@@ -68,7 +68,7 @@
         <div class="col-Auto container py-5">
             <div class="container py-5">
                 <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                    <div class="text-white bg-secondary px-1 py+2 rounded position-absolute">{{ $store->genre }}</div>
+                    <div class="text-white bg-success px-1 py+2 rounded position-absolute">{{ $store->genre }}</div>
                     <h1 class="title py-4">
                         {{ $store->name }} &emsp; <span class="star-rating py-1" data-rate="{{ $store->average }}"></span>
                     </h1>
@@ -201,10 +201,11 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">検索</h4>
-                            <a class="btn-link" href="/">店名で検索</a>
-                            <a class="btn-link" href="/">ジャンルで検索</a>
-                            <a class="btn-link" href="/">住所で検索</a>
+                            <h4 class="text-light mb-3">サイト内リンク</h4>
+                            <a class="btn-link" href="/">トップページ</a>
+                            <a class="btn-link" href="/stores/name_index">店名で検索</a>
+                            <a class="btn-link" href="/stores/genre_index">ジャンルで検索</a>
+                            <a class="btn-link" href="/stores/address_index">住所で検索</a>
                             <a class="btn-link" href="">店舗一覧</a>
                         </div>
                     </div>
