@@ -29,7 +29,9 @@ return new class extends Migration
             $table->string('station',300);
             $table->string('budget',200);
             $table->string('parking',200);
-            $table->string('image_url');
+            $table->string('image_url1')->default('https://res-console.cloudinary.com/dyf8eku1l/thumbnails/v1/image/upload/v1704101172/bm9faW1hZ2Vfa3NxNHk5/grid_landscape');
+            $table->string('image_url2')->default('https://res-console.cloudinary.com/dyf8eku1l/thumbnails/v1/image/upload/v1704101172/bm9faW1hZ2Vfa3NxNHk5/grid_landscape');
+            $table->string('image_url3')->default('https://res-console.cloudinary.com/dyf8eku1l/thumbnails/v1/image/upload/v1704101172/bm9faW1hZ2Vfa3NxNHk5/grid_landscape');
             $table->timestamps();
             $table->softDeletes();
             

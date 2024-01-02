@@ -50,6 +50,7 @@ class StoreController extends Controller
         //dd($image_url);
         
         $image_url = Cloudinary::upload($request->file('image_url')->getRealPath())->getSecurePath();
+        //dd($image_url);
         $input = $request['store'];
         $input += ['image_url' => $image_url];
         $store->fill($input)->save();

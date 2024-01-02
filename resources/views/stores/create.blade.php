@@ -65,8 +65,12 @@
                 <textarea name="store[parking]" placeholder="駐車場情報を入力"></textarea>
             </div>
             <div class="image">
-                <h2>画像を登録</h2>
-                <input type="file" name="image_url">
+                <h2>画像1を登録</h2>
+                <input type="file" name="image_url1">
+                <h2>画像2を登録</h2>
+                <input type="file" name="image_url2">
+                <h2>画像3を登録</h2>
+                <input type="file" name="image_url3">
             </div>
             <input type="submit" value="新規登録"/>
         </form>
