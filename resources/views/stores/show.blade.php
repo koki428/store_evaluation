@@ -192,8 +192,13 @@
                         <p>{!! nl2br(e($store->parking)) !!}</p>
                     </div>
                 </div>
+                 <div class="edit">
+                    <a href="/stores/{{ $store->id }}/edit">編集</a>
+                </div>
             </div>
         </div>
+       
+       
         
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">

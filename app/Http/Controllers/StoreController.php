@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Store;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreRequest;
 use Cloudinary;
 
 class StoreController extends Controller
@@ -105,13 +106,38 @@ class StoreController extends Controller
     {
         //dd($image_url);
         
-        $image_url = Cloudinary::upload($request->file('image_url')->getRealPath())->getSecurePath();
+        $image_url1 = Cloudinary::upload($request->file('image_url1')->getRealPath())->getSecurePath();
         //dd($image_url);
         $input = $request['store'];
-        $input += ['image_url' => $image_url];
+        $input += ['image_url1' => $image_url1];
         $store->fill($input)->save();
         return redirect('/stores/' . $store->id);
         //dd($request->all());
+        
+        $image_url2 = Cloudinary::upload($request->file('image_url2')->getRealPath())->getSecurePath();
+        //dd($image_url);
+        $input = $request['store'];
+        $input += ['image_url2' => $image_url2];
+        $store->fill($input)->save();
+        return redirect('/stores/' . $store->id);
+        
+        $image_url3 = Cloudinary::upload($request->file('image_url3')->getRealPath())->getSecurePath();
+        //dd($image_url);
+        $input = $request['store'];
+        $input += ['image_url3' => $image_url3];
+        $store->fill($input)->save();
+        return redirect('/stores/' . $store->id);
     }
     
+    public function edit(Store $store)
+    {
+        return view('stores.edit')->with(['store' => $store]);
+    }
+    
+    public function update(StoreRequest $request, Store $store)
+    {
+        $input_store = $request['store'];
+        $store->fill($input_store)->save();
+        return redirect('/stores/' . $store->id);
+    }
 }
