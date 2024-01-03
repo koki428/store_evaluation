@@ -86,6 +86,11 @@ class StoreController extends Controller
         }
     }
     
+    public function show_all(Store $store)
+    {
+        return view('stores.show_all')->with(['stores' => $store->getPaginateByLimit(5)]);
+    }
+    
     public function show(Store $store)
     {
         return view('stores.show')->with(['store' => $store]);

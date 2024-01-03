@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [StoreController::class, 'index'])->name('index');
 Route::get('/stores/name_index', [storeController::class, 'name_index']);
+Route::get('/stores/show_all',[StoreController::class, 'show_all']);
 Route::get('/stores/genre_index', [storeController::class, 'genre_index']);
 Route::get('/stores/address_index', [storeController::class, 'address_index']);
 Route::get('/stores/no_result', [StoreController::class, 'no_result']);

@@ -28,7 +28,7 @@
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
                             <a href="/" class="nav-item nav-link active">トップページ</a>
-                            <a href="/" class="nav-item nav-link active">店舗一覧</a>
+                            <a href="/stores/show_all" class="nav-item nav-link active">店舗一覧</a>
                         </div>
                     </div>
                 </nav>
@@ -113,7 +113,7 @@
                             <a class="btn-link" href="/stores/name_index">店名で検索</a>
                             <a class="btn-link" href="/stores/genre_index">ジャンルで検索</a>
                             <a class="btn-link" href="/stores/address_index">住所で検索</a>
-                            <a class="btn-link" href="">店舗一覧</a>
+                            <a class="btn-link" href="/stores/show_all">店舗一覧</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
