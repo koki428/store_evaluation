@@ -24,7 +24,9 @@ class Store extends Model
         'station',
         'budget',
         'parking',
-        'image_url',
+        'image_url1',
+        'image_url2',
+        'image_url3',
     ];
     
     public function getPaginateByLimit(int $limit_count = 5)

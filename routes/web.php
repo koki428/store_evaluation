@@ -30,17 +30,19 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', [StoreController::class, 'index'])->name('index');
-Route::get('/stores/name_index', [storeController::class, 'name_index']);
+Route::get('/stores/name_index', [StoreController::class, 'name_index']);
 Route::get('/stores/show_all',[StoreController::class, 'show_all']);
-Route::get('/stores/genre_index', [storeController::class, 'genre_index']);
-Route::get('/stores/address_index', [storeController::class, 'address_index']);
+Route::get('/stores/genre_index', [StoreController::class, 'genre_index']);
+Route::get('/stores/address_index', [StoreController::class, 'address_index']);
 Route::get('/stores/no_result', [StoreController::class, 'no_result']);
 Route::get('/stores/name_index/search_result', [StoreController::class, 'name_search']);
 Route::get('/stores/genre_index/search_result', [StoreController::class, 'genre_search']);
 Route::get('/stores/address_index/search_result', [StoreController::class, 'address_search']);
 Route::post('/stores', [StoreController::class, 'preserve']);
 Route::get('/stores/create', [StoreController::class, 'create'])->middleware("auth");
-Route::get('/stores/{store}', [StoreController::class,'show']);
+Route::get('/stores/{store}', [StoreController::class, 'show']);
+Route::get('/stores/{store}/edit', [StoreController::class, 'edit'])->middleware("auth");
+Route::put('/stores/{store}', [StoreController::class, 'update']);
 //Route::post('/stores', [StoreController::class, 'preserve']);
 
 require __DIR__.'/auth.php';
